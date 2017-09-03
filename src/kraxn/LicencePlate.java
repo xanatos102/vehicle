@@ -6,11 +6,15 @@ package kraxn;
  */
 public class LicencePlate {
     
-    String licencePlateString ;
+    private String licencePlateString ;
     
-    LicencePlate()
+    public LicencePlate()
     {
        licencePlateString = "" ;
     }
     
+    @Override
+    public String toString(){
+        return "  [licence plate]  string/text -> " + licencePlateString ;
+    }
 }

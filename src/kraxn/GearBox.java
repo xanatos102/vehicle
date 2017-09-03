@@ -6,10 +6,18 @@ package kraxn;
  */
 public class GearBox {
     
-    int currentGear ;
+    private Integer currentGear ;   // easier conversion for status messages
     
-    GearBox(){
+    public GearBox(){
         currentGear = 0 ;
+    }
+    
+
+    @Override
+    public String toString() {
+    
+       return  "  [gear box]  currentgear -> " + currentGear.toString() ;
+    
     }
     
 }
