@@ -5,42 +5,37 @@ package kraxn;
  * @author stefan
  */
 public class Engine {
-    
-    private Integer revs ;
-    
-    private final int min_revs = 0 ;
-    private final int max_revs = 6500 ;
-    
-    public Engine(){
 
-        revs = 0 ;
-    
+    private int revs;
+
+    private final int min_revs = 0 ;
+    private final int idle_revs = 800 ;
+    private final int max_revs = 6500 ;
+
+    public Engine() {
+        revs = min_revs;
     }
-    
-    public boolean isRunning(){
-    
+
+    // instead of: if (revs > 0) ... else ...
+    public boolean isRunning() {
         return revs > 0;
-    
     }
-    
-    public Integer start (){
-    
-        revs = 800 ;
-        return revs ;
-   
+
+    public int start() {
+        revs = idle_revs ;
+        return revs;
     }
-    
-    public int setRevs(int absRevs){
-    
-        if (absRevs <= max_revs )
-          revs = absRevs ;
-          
-        return revs ;
+
+    public int setRevs(int absRevs) {
+        if (absRevs <= max_revs) {
+            revs = absRevs;
+        }
+        return revs;
     }
-    
+
     @Override
     public String toString() {
-        return  "  [engine]  revs -> " + revs.toString() ;      
+        return "  [engine]  revs -> " + String.valueOf(revs);
     }
-    
+
 }

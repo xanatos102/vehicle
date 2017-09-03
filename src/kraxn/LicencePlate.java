@@ -10,7 +10,7 @@ public class LicencePlate {
     
     public LicencePlate()
     {
-       licencePlateString = "" ;
+       licencePlateString = "RANDOM 1" ;
     }
     
     @Override
