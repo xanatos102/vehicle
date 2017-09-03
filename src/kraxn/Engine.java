@@ -9,7 +9,7 @@ public class Engine {
     private int revs;
 
     private final int min_revs = 0 ;
-    private final int idle_revs = 800 ;
+    private final int idle_revs = 700 ;
     private final int max_revs = 6500 ;
 
     public Engine() {

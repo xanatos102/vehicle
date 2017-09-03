@@ -7,6 +7,8 @@ package kraxn;
 public class Car {
     
     private int speed ;
+    private final int max_speed = 255 ;
+    
     private GearBox gearbox ;
     private Engine engine ;
     private LicencePlate licenceplate ;
@@ -25,6 +27,18 @@ public class Car {
     
         //engine.setRevs(800) ;
         engine.start() ; 
+        return this ;
+    }
+    
+    public Car dragRace(){
+   
+        gearbox.setNeutral();
+        gearbox.shiftUp() ;
+        while (speed <= max_speed){
+           
+        
+        }
+    
         return this ;
     }
     
